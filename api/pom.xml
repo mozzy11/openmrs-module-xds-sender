@@ -108,14 +108,15 @@
           <bindingDirectory>src/main/resources/xjb</bindingDirectory>
           <schemaLanguage>WSDL</schemaLanguage>
           <generatePackage>org.openmrs.module.xdssender.notificationspullpoint</generatePackage>
-          <schemas>
-            <schema>
-              <url>http://docs.oasis-open.org/wsn/bw-2.wsdl</url>
-            </schema>
-            <schema>
-              <url>https://docs.oasis-open.org/wsn/brw-2.wsdl</url>
-            </schema>
-          </schemas>
+           <schemaDirectory>${project.basedir}/src/main/resources/wsn-schemas</schemaDirectory>
+            <schemaIncludes>
+              <include>b-2.xsd</include>
+              <include>br-2.xsd</include>
+              <include>t-1.xsd</include>
+              <include>bf-2.xsd</include>
+               <include>ws-addr.xsd</include>
+                <include>xml.xsd</include>
+            </schemaIncludes>
         </configuration>
       </plugin>
       <plugin>
